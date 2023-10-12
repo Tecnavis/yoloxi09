@@ -1,188 +1,187 @@
 *,*::after,*::before{
-    margin: 0;
-    box-sizing: border-box;      
+  margin: 0;
+  box-sizing: border-box;      
 }
 html{
-    font: size 60.5%;;
+  font: size 60.5%;;
 }
 body{
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 li{
-    list-style: none;
+  list-style: none;
 }
 a{
-    text-decoration: none;
-    color:rgb(255, 255, 255);
+  text-decoration: rgb(29, 121, 201);
+  color: rgb(9, 27, 162);
 
 }
 
 .nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 8vh ;
-    background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh ;
+  background: rgb(255, 255, 255);
 }
 .nav__brand{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-    text-transform: uppercase;
-    font-weight: initial;
-    font-size: xx-large;
-    font-style: inherit;
-    
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  text-transform: uppercase;
+  font-weight: initial;
+  font-size: xx-large;
+  font-style: inherit;
+  
 }
 .nav__menu{
-    display: flex;
-    align-items:center;
-    justify-content: space-around;
-    gap: 3rem;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  gap: 3rem;
 }
 .nav__toggler div{
 width: 2.5rem;
 height: 0.2rem;
 margin: 0.4rem;
-background: rgb(255, 255, 255);
+background: rgb(6, 6, 6);
 transition: 0.4s ease-in;
 
 }
 .nav__toggler{
-    cursor:pointer;
-    display: none;
+  cursor:pointer;
+  display: none;
 }
 @media screen and (max-width:768px) {
-    .nav__toggler{
-        display: block;
-    }
-    .nav__menu{
-        position: fixed;
-        top: 7vh;
-        right: 0;
-        width: 50%;
-        height: 93vh;
-        background: rgb(0,28,73);
-        flex-direction: column ;
-        transform: translateX(100%);
-    }   transition: 0.5s ease-in;
+  .nav__toggler{
+      display: block;
+  }
+  .nav__menu{
+      position: fixed;
+      top: 7vh;
+      right: 0;
+      width: 50%;
+      height: 93vh;
+      background: rgb(5, 102, 86);
+      flex-direction: column ;
+      transform: translateX(100%);
+  }   transition: 0.5s ease-in;
 }
- /* Nav Actos Class */
- .nav__active{
-    transform: translateX(0);
- }
+/* Nav Actos Class */
+.nav__active{
+  transform: translateX(0);
+}
 
- /* Toggler Icon animation */
- .toggle .line1{
-    transform: rotate(-45deg) translate(-4px,5px);
+/* Toggler Icon animation */
+.toggle .line1{
+  transform: rotate(-45deg) translate(-4px,5px);
 
- }
- .toggle .line2{
-    opacity: 0;
- }
- .toggle .line3{
-    transform: rotate(-45deg) translate(-4px,5px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(-45deg) translate(-4px,5px);
 
-    
- }
- 
+  
+}
+
 /* Add styling for the Sign Up and Login buttons */
-/* Style for the "Sign Up" button */
+/* Style for the "Login" button */
 
 .nav__item:nth-last-child(2) .link {
-    background-color: #044890;
-    color: #fff;
-    padding: 6px 12px; /* Adjust the padding to decrease width and height */
-    border-radius: 5px; /* Add border radius */
-    margin-right: 10px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: large;
-  }
+  /* background-color:rgb(0, 0, 0); */
+  color: #000000;
+  padding: 6px 12px; /* Adjust the padding to decrease width and height */
+ 
+  margin-right: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;;
+}
+
+.nav__item:nth-last-child(2) .link:hover {
+  background-color: #000000;
+}
   
-  .nav__item:nth-last-child(2) .link:hover {
-    background-color: #4690ff;
-  }
-    
-  .nav__item:nth-last-child(2) .link:hover {
-    background-color: #000000;
-  }
+.nav__item:nth-last-child(2) .link:hover {
+  background-color: #f9f9f9;
+}
 
 
-  
-  /* Style for the "Login" button */
-  .nav__item:last-child .link {
-    background-color:  #044890;
-    color: #fff;
-    padding: 6px 12px; /* Adjust the padding to decrease width and height */
-    border-radius: 5px; /* Add border radius */
-    margin-right: 10px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: large;
+
+/* Style for the "sign up" button */
+.nav__item:last-child .link {
+  background-color:  #000000;
+  color: #fff;
+  padding: 6px 12px; /* Adjust the padding to decrease width and height */
+  border-radius: 5px; /* Add border radius */
+  margin-right: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
 }
 
 
 /* Hover effect for both buttons */
 .nav__item:nth-last-child(2) .link:hover,
 .nav__item:last-child .link:hover {
-  background-color: #003d99;
+background-color:rgb(0, 7, 6);
 }
 
-  
-  
-  .nav__item:last-child .link:hover {
-    background-color: #000a9d;
-  }
-  
-  /* Add hover effects to the navigation links */
-.nav__menu .link {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .nav__menu .link:hover {
-    color: #003d99; /* Change the text color on hover */
-  }
 
- /* Add hover effects to the navigation links */
+
+.nav__item:last-child .link:hover {
+  background-color:  rgb(9, 27, 162);
+}
+
+/* Add hover effects to the navigation links */
 .nav__menu .link {
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s;
-  }
-  
-  /* Hover effect for navigation links */
-  .nav__menu .link:hover {
-    color: #003d99; /* Change the text color on hover */
-  }
-  
-  /* Underline effect on navigation links */
-  .nav__menu .link:hover::after {
-    content: "";
-    position: absolute;
-    bottom: -2px; /* Adjust the position of the underline as needed */
-    left: 0;
-    width: 100%;
-    height: 2px; /* Adjust the height of the underline as needed */
-    background-color:#140acd; /* Color of the underline on hover */
-    transition: width 0.3s;
-  }
-  
-  /* Remove hover effect from Sign Up and Login buttons */
-  .nav__item:nth-last-child(2) .link:hover,
-  .nav__item:last-child .link:hover {
-    color: #fff; /* Reset the text color on hover */
-    text-decoration: none; /* Reset text decoration */
-  }
-  
-  /* Remove underline effect from Sign Up and Login buttons */
-  .nav__item:nth-last-child(2) .link:hover::after,
-  .nav__item:last-child .link:hover::after {
-    content: none; /* Remove the underline on hover */
-  }
-  
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav__menu .link:hover {
+  color: #000000; /* Change the text color on hover */
+}
+
+/* Add hover effects to the navigation links */
+.nav__menu .link {
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Hover effect for navigation links */
+.nav__menu .link:hover {
+  color: #000000; /* Change the text color on hover */
+}
+
+/* Underline effect on navigation links */
+.nav__menu .link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust the position of the underline as needed */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the underline as needed */
+  background-color:#000000; /* Color of the underline on hover */
+  transition: width 0.3s;
+}
+
+/* Remove hover effect from Sign Up and Login buttons */
+.nav__item:nth-last-child(2) .link:hover,
+.nav__item:last-child .link:hover {
+  color: #fff; /* Reset the text color on hover */
+  text-decoration: none; /* Reset text decoration */
+}
+
+/* Remove underline effect from Sign Up and Login buttons */
+.nav__item:nth-last-child(2) .link:hover::after,
+.nav__item:last-child .link:hover::after {
+  content: none; /* Remove the underline on hover */
+}

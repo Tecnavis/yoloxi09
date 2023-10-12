@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import '../components/navbar.css';
+  import React, { useState } from 'react';
+  import '../components/navbar.css';
 
-function Navbar() {
-  const [active, setActive] = useState('nav__menu');
-  const [toggleIcon, setToggleIcon] = useState('nav__toggler');
+  function Navbar() {
+    const [active, setActive] = useState('nav__menu');
+    const [toggleIcon, setToggleIcon] = useState('nav__toggler');
 
-  const navToggler = () => {
-    setActive(active === 'nav__menu' ? 'nav__menu nav__active' : 'nav__menu');
-    setToggleIcon(toggleIcon === 'nav__toggler' ? 'nav__toggler toggle' : 'nav__toggler');
-  };
+    const navToggler = () => {
+      setActive(active === 'nav__menu' ? 'nav__menu nav__active' : 'nav__menu');
+      setToggleIcon(toggleIcon === 'nav__toggler' ? 'nav__toggler toggle' : 'nav__toggler');
+    };
+
 
   return (
     <nav className="nav">
@@ -57,4 +58,5 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+
+  export default Navbar;
