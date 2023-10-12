@@ -17,7 +17,7 @@ function Navbar() {
       </a>
       <ul className={active}>
         <li className="nav__item">
-          <a href="#" className="link">
+          <a href="home" className="link">
             Home
           </a>
         </li>
@@ -27,7 +27,7 @@ function Navbar() {
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="link">
+          <a href="Rent" className="link">
             Rent
           </a>
         </li>
