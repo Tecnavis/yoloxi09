@@ -1,49 +1,82 @@
-import React, { useState } from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../components/Rent.css';
 
 function Rent() {
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(true);
+  // Define your image data
+  const images = [
+    { src: '../as.jpg', alt: 'Denim Jeans' },
+    { src: '../d.jpeg', alt: 'Image 2' },
+    { src: '../as.jpg', alt: 'Image 3' },
+  ];
 
-  const handleOnChange = (selectedIndex) => {
-   
-    if (selectedIndex === 0) {
-      setShowLeftArrow(false);
-      setShowRightArrow(true);
-    } else if (selectedIndex === yourData.length - 1) {
-      setShowLeftArrow(true);
-      setShowRightArrow(false);
-    } else {
-      setShowLeftArrow(true);
-      setShowRightArrow(true);
-    }
-  };
+  // Assume data from the admin panel is stored in a variable 'propertyData'
+  let propertyData = [
+    {
+      name: 'Property 1',
+      location: 'Location 1',
+      price: '$1000',
+      type: 'For Sale',
+    },
+    {
+      name: 'Property 2',
+      location: 'Location 2',
+      price: '$2000',
+      type: 'For Rent',
+    },
+    {
+      name: 'Property 3',
+      location: 'Location 2',
+      price: '$2000',
+      type: 'For Rent',
+    },
+    {
+      name: 'Property 1',
+      location: 'Location 1',
+      price: '$1000',
+      type: 'For Sale',
+    },
+    {
+      name: 'Property 2',
+      location: 'Location 2',
+      price: '$2000',
+      type: 'For Rent',
+    },
+    {
+      name: 'Property 3',
+      location: 'Location 2',
+      price: '$2000',
+      type: 'For Rent',
+    },
+    // Add more property data as needed
+  ];
 
   return (
     <div className="card-container">
-      <div className="card">
-        <Carousel showArrows={true} onChange={handleOnChange} showStatus={false}>
-          <div>
-            <img src="../as.jpg" alt="Denim Jeans" />
+      {propertyData.map((property, index) => (
+        <div className="product-card" key={index}>
+          <div className="slider-container">
+            <Carousel showArrows={true} showStatus={false} showThumbs={false}>
+              {images.map((image, imgIndex) => (
+                <div key={imgIndex}>
+                  <img src={image.src} alt={image.alt} />
+                </div>
+              ))}
+            </Carousel>
           </div>
-          <div>
-            <img src="../as.jpg" alt="Another Image" />
+          <div className="product-details">
+            <h2>{property.name}</h2>
+            <p className="description">Location: {property.location}</p>
+            <p className="price">Price: {property.price}</p>
+            <p className="type">Type: {property.type}</p>
+            
+            <div className="buy-button-container">
+              <button className="buy-button">Add to Cart</button>
+            </div>
           </div>
-          <div>
-            <img src="../as.jpg" alt="Yet Another Image" />
-          </div>
-         
-        </Carousel>
-        <h1>Tailored Jeans</h1>
-        <p className="price">$19.99</p>
-        <p>Some text about the jeans..</p>
-        <p>
-          <button>Add to Cart</button>
-        </p>
-      </div>
-      
+        </div>
+      ))}
     </div>
   );
 }
