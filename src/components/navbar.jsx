@@ -38,6 +38,11 @@ const handlePageChange = (page) => {
           </a>
         </li>
         <li className="nav__item">
+          <a href="sell" className="link">
+           Sell
+          </a>
+        </li>
+        <li className="nav__item">
           <a href="#" className="link">
             Contact
           </a>
