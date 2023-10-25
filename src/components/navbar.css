@@ -185,3 +185,11 @@ background-color:rgb(0, 7, 6);
 .nav__item:last-child .link:hover::after {
   content: none; /* Remove the underline on hover */
 }
+.nav__line {
+  height: 2px;
+  width: 100px; /* Adjust the width of the line as needed */
+  background-color: #000000; /* Color of the line */
+  position: absolute;
+  bottom: 0;
+  transition: width 0.3s; /* Smooth transition effect */
+}

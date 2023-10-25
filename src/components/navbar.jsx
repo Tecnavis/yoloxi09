@@ -10,7 +10,12 @@
       setToggleIcon(toggleIcon === 'nav__toggler' ? 'nav__toggler toggle' : 'nav__toggler');
     };
 
+const [activePage, setActivePage] = useState('home'); // Set an initial active page
 
+// Function to change the active page and line width
+const handlePageChange = (page) => {
+  setActivePage(page);
+};
   return (
     <nav className="nav">
       <a href="#" className="nav__brand">
@@ -48,6 +53,7 @@
             Login
           </a>
         </li>
+        
       </ul>
       <div onClick={navToggler} className="nav__toggler">
         <div className="line1"></div>
@@ -55,6 +61,7 @@
         <div className="line3"></div>
       </div>
     </nav>
+    
   );
 }
 
