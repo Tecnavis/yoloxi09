@@ -1,40 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../components/home.css';
 
 function Home(props) {
+    const [selectedOption, setSelectedOption] = useState("optionA");
+
+    const handleOptionClick = (option) => () => {
+        setSelectedOption(option);
+    };
+
     return (
-        <div>
-            <h1>Search Your Next Home</h1>
-            <div>
-                <h3>Find & Sell Featured Properties Located Near You</h3>
-            </div>
-            <div className="rectangular-bar">
-                <div className="section">
-                    <h4>Purpose</h4>
-                    <select>
-                        <option value="Sell">Sell</option>
-                        <option value="Buy">Buy</option>
-                     </select>
-                </div>
-                <div className="section">
-                    <h4>Location</h4>
-                    <select>
-                        <option value="delhi">Delhi</option>
-                        <option value="mumbai">Mumbai</option>
-                        <option value="newyork">New York</option>
-                        <option value="london">London</option>
-                    </select>
-                </div>
-                <div className="section">
-                    <h4>Type</h4>
-                    <select>
-                        <option value="apartment">Apartment</option>
-                        <option value="house">House</option>
-                        <option value="office">Office</option>
-                        <option value="land">Land</option>
-                    </select>
-                </div>
-                <button className="search-button">Search</button>
+        <div className='squ-box'>
+            <h1>Find a home to call your own</h1>
+            <div className="switch-menu">
+                <p
+                    className={selectedOption === "optionA" ? "active" : ""}
+                    onClick={handleOptionClick("optionA")}
+                >
+                    rent
+                </p>
+                <p
+                    className={selectedOption === "optionB" ? "active" : ""}
+                    onClick={handleOptionClick("optionB")}
+                >
+                    sell
+                </p>
             </div>
         </div>
     );
