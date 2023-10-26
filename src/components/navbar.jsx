@@ -10,65 +10,67 @@
       setToggleIcon(toggleIcon === 'nav__toggler' ? 'nav__toggler toggle' : 'nav__toggler');
     };
 
-const [activePage, setActivePage] = useState('home'); // Set an initial active page
+    const [activePage, setActivePage] = useState('home'); // Set an initial active page
 
-// Function to change the active page and line width
-const handlePageChange = (page) => {
-  setActivePage(page);
-};
-  return (
-    <nav className="nav">
-      <a href="#" className="nav__brand">
-        Yoloxi
-      </a>
-      <ul className={active}>
-        <li className="nav__item">
-          <a href="home" className="link">
-            Home
+    // Function to change the active page and line width
+    const handlePageChange = (page) => {
+      setActivePage(page);
+    };
+
+    return (
+      <div>
+        <nav className="nav">
+          <a href="#" className="nav__brand">
+            Yoloxi
           </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="link">
-            About
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="Rent" className="link">
-            Rent
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="sell" className="link">
-           Sell
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="link">
-            Contact
-          </a>
-        </li>
-        {/* Add Sign Up and Login buttons */}
-        <li className="nav__item">
-          <a href="#" className="link">
-            Sign Up
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="link">
-            Login
-          </a>
-        </li>
-        
-      </ul>
-      <div onClick={navToggler} className="nav__toggler">
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
+          <ul className={active}>
+            <li className="nav__item">
+              <a href="home" className="link">
+                Home
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="link">
+                About
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="Rent" className="link">
+                Rent
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="sell" className="link">
+                Sell
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="link">
+                Contact
+              </a>
+            </li>
+            {/* Add Sign Up and Login buttons */}
+            <li className="nav__item">
+              <a href="#" className="link">
+                Sign Up
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="link">
+                Login
+              </a>
+            </li>
+          </ul>
+          <div onClick={navToggler} className="nav__toggler">
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
+          </div>
+        </nav>
+        {/* Insert a line break or separation */}
+        <div className="navbar-separator"></div>
       </div>
-    </nav>
-    
-  );
-}
-
+    );
+  }
 
   export default Navbar;

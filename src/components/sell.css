@@ -13,7 +13,7 @@
 
 .content {
     padding: 20px;
-    color: #6c86ed;
+    color: rgb(25, 150, 254);
 }
 
 .form {
@@ -46,7 +46,7 @@ input[type="tel"] { /* Added input[type="tel"] for phone number input */
 }
 
 .submit-button {
-    background-color: #6c86ed;
+    background-color: rgb(25, 150, 254);
     color: #000000;
     padding: 10px 20px;
     border: none;

@@ -152,3 +152,27 @@ flex-direction: column;
         margin-top: 2cm; /* Adjust the margin for smaller screens */
     }
 }
+.sb__footer-links_div h4 {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 0.9rem;
+    border-bottom: 2px solid #000; /* Add a bottom border to visually separate these sections */
+    padding-bottom: 0.5rem; /* Adjust the spacing as needed */
+}
+
+.sb__footer-links_div h4:last-child {
+    border-bottom: none; /* Remove the bottom border from the last section */
+}
+
+/* Styling for the social media icons */
+.socialmedia img {
+    width: 80%;
+}
+
+/* Adjust the margin for smaller screens if needed */
+@media screen and (max-width: 400px) {
+    .sb__footer {
+        margin-top: 2cm; /* Adjust the margin for smaller screens */
+    }
+}
+

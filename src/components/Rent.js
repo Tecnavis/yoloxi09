@@ -34,6 +34,27 @@ function Rent() {
       propertyType: 'House',
       preferredTenants: 'Bachelor',
       availability: 'Within 1 month',
+    }, {
+      name: 'Property 1',
+      location: 'Location 1',
+      price: 1000,
+      type: 'For Sale',
+      bhk: 2,
+      furnishing: 'Furnished',
+      propertyType: 'Apartment',
+      preferredTenants: 'Family',
+      availability: 'Immediate',
+    },
+    {
+      name: 'Property 2',
+      location: 'Location 2',
+      price: 2000,
+      type: 'For Rent',
+      bhk: 3,
+      furnishing: 'Semi-furnished',
+      propertyType: 'House',
+      preferredTenants: 'Bachelor',
+      availability: 'Within 1 month',
     },
     // Add more property data as needed
   ]);

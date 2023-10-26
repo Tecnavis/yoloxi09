@@ -4,6 +4,7 @@ import '../components/footer.css'
 function Footer(props) {
     return (
         <div className='sb__footer'>
+             <hr />
             <div className="sb__footer-links">
                 <div className="sb__footer-links_div">
                     <h4>For Business</h4>
@@ -60,7 +61,8 @@ function Footer(props) {
                     </div>
                 </div>
             </div>
-            <hr />
+            
+            
             <div className="sb__footer-below">
                 <div className="sb__footer-copyright ">
                     <p>&#169;{new Date().getFullYear()} Tecnavis. All rights reserved.</p>
